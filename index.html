@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+
+
+h1 {
+       text-align: center;
+    }
+    
+button:hover 
+{
+background-color: #e60073;
+opacity: 0.8;
+}
+
+.button:hover 
+{
+background-color: #00b3b3;
+opacity: 0.8;
+}
+
+
+table
+{
+margin-left: auto;
+margin-right: auto;
+margin-top: -20px;
+}
+
+.buttTable
+{
+height:60px;
+width:60px;
+background-color:#b30059; 
+color: white; 
+border: 1px solid;
+border-radius:10px;
+}
+
+#stoptable
+{
+height:50px;
+width:70px;
+border-radius:10px;
+}
+   </style>
+	</head>
+	<body>
+		<h1>movement direction control</h1>
+		<form method = "POST" action="insert1.php">
+		
+
+        <!-- Table of buttuns  -->
+        <table>
+            <tr style =" text-align: center">
+                <td > </td>  <td > <button  type="submit" value="Submit" name= "Direction" class="buttTable" ><b>For<br/>ward</button></td> <td > </td>
+                </tr>
+                
+                <tr style =" text-align: center">
+                    <td > <button  type="submit" value="Submit" name="Direction" class="buttTable" ><b>Left</button>&nbsp;</td> <td ><button type="submit" value="Submit" name="Direction" class="buttTable" id="stoptable"><b>STOP</button>&nbsp;</td> <td ><button  type="submit" value="Submit" name="Direction" class="buttTable" ><b>Right</button></td>
+                    </tr>
+                    
+                    <tr style =" text-align: center">
+                        <td > </td>   <td > <button  type="submit" value="Submit" name="Direction" class="buttTable"><b>Back<br/>ward</button></td> <td > </td> 
+                        </tr>
+                    
+                    </table>
+    
+    <!-- END Table of buttuns  -->
+
+		</form>
+
+        <!-- Chatbot Script -->
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "dbfc437b-f34c-47f6-8fc4-a716e17b8860", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "b89fd40a-3279-4806-8473-8e7b6ae91951", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  
+	</body>
+</html>
